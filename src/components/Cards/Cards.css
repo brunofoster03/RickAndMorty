@@ -1,0 +1,14 @@
+.Cards-Div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: fit-content;
+    padding-bottom: 100px;
+}

@@ -1,0 +1,76 @@
+.SearchBar-Div{
+    display: flex;
+    gap: 5px;
+}
+
+.SearchBar-Input, .SearchBar-Input-Disabled{
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border: none;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+.SearchBar-Input-Disabled{
+    opacity: 0.5;
+}
+
+:is(.SearchBar-Input, .SearchBar-Input-Disabled):focus{
+    outline: none;
+}
+
+:is(.SearchBar-Input, .SearchBar-Input-Disabled)::-webkit-outer-spin-button,
+:is(.SearchBar-Input, .SearchBar-Input-Disabled)::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.SearchBar-Button, .SearchBar-Button-Disabled{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #ff0ff3;
+    box-shadow: 0px 0px 5px black;
+}
+.SearchBar-Button-Disabled{
+    opacity: 0.5;
+    cursor: auto;
+}
+
+:is(.SearchBar-Button, .SearchBar-Button-Disabled) img{
+    width: 25px;
+    height: 25px;
+}
+
+:is(.SearchBar-Button):hover img{
+    animation: plusbutton 0.1s forwards;
+}
+:is(.SearchBar-Button):hover{
+    box-shadow: 0px 0px 10px black;
+}
+
+@keyframes plusbutton{
+    100%{
+        transform: scale(0.9);
+    }
+}
+
+.SearchBar-Div div{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.SearchBar-Input-Wrong{
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
+}

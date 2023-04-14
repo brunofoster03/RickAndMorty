@@ -1,0 +1,121 @@
+.Form-Div-Rectangle{
+    background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.5) 100%);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #67c0ac;
+    box-shadow: 0px 0px 15px #67c0ac;
+}
+.Form-Div-Square{
+    background: rgba(0, 0, 0);
+    backdrop-filter: blur(25px);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border: 4px solid #67c0ac;
+    box-shadow: 0px 0px 15px #67c0ac;
+}
+
+.Form-Form{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    gap: 20px;
+}
+
+.Form-Input-Error{
+    border: 2px solid red;
+}
+
+.Form-Input, .Form-Input-Error:focus{
+    outline: none;
+}
+
+.Form-Label{
+    color: white;
+    text-shadow: 1px 1px 1px white, 1px -1px 1px white, -1px 1px 1px white, -1px -1px 1px;
+    font-size: 30px;
+}
+
+.Form-Input, .Form-Input-Error{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border: none;
+    border-bottom: 4px solid #67c0ac;
+    border-top: 4px solid #67c0ac;
+    color: white;
+    font-size: 20px;
+    padding: 2px;
+    text-align: center;
+    box-shadow: 0px 0px 10px #67c0ac;
+}
+.Form-Input-Error{
+    border-bottom: 4px solid red;
+    border-top: 4px solid red;
+}
+
+.Form-Submit-Enabled{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lime;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px white;
+    border: 3px solid black;
+}
+.Form-Submit-Disabled{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: green;
+    cursor: auto;
+    box-shadow: none;
+    border: 3px solid black;
+}
+
+:is(.Form-Submit-Enabled, .Form-Submit-Disabled) img{
+    width: 45px;
+    height: 45px;
+}
+.Form-Submit-Enabled:hover{
+    box-shadow: 0px 0px 10px white;
+}
+.Form-Submit-Enabled:hover img{
+    animation: hover 0.1s forwards;
+}
+
+@keyframes hover {
+    100%{
+        transform: scale(0.9);
+    }
+}

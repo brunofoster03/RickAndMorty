@@ -1,0 +1,104 @@
+.Favorites-Div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: fit-content;
+    padding-bottom: 100px;
+}
+
+.Favorites-Select{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.Favorites-Select-Order{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Favorites-Select-Order button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+}
+
+.Favorites-Select-Order button:nth-of-type(1){
+    background: #1caa68;
+}
+.Favorites-Select-Order button:nth-of-type(2){
+    background: #a41111;
+}
+
+.Favorites-Select-Order button img{
+    width: 40px;
+    height: 40px;
+}
+
+.Favorites-Select-Gender{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.Favorites-Select-Gender button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+}
+
+.Favorites-Select-Gender button img{
+    width: 40px;
+    height: 40px;
+}
+
+.Favorites-Select-Gender button:nth-of-type(1){
+    background: #88c9e8;
+}
+.Favorites-Select-Gender button:nth-of-type(2){
+    background: #ffb6c1;
+}
+.Favorites-Select-Gender button:nth-of-type(3){
+    background: #ffd862;
+}
+.Favorites-Select-Gender button:nth-of-type(4){
+    background: #c1c1c1;
+}
+
+.Favorites-SelectedOption{
+    border: 3px solid white;
+    filter: drop-shadow(0px 0px 3px white);
+}
+
+.Favorites-Select button:hover img{
+    animation: hover 0.1s forwards;
+}
+
+@keyframes hover {
+    100%{
+        transform: scale(0.9);
+    }
+}
