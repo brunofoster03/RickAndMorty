@@ -1,0 +1,163 @@
+.Nav-Div{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 5px black;
+    z-index: 10;
+    user-select: none;
+}
+
+:is(.Nav-Random, .Nav-Random-Disabled){
+    width: 50px;
+    height: 50px;
+    background: #ff566c;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid black;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+}
+.Nav-Random-Disabled{
+    opacity: 0.5;
+    cursor: auto;
+}
+
+:is(.Nav-Random, .Nav-Random-Disabled) img{
+    width: 30px;
+    height: 30px;
+}
+
+.Nav-Random:hover {
+    box-shadow: 0px 0px 10px black;
+}
+
+.Nav-Random:active{
+    background: rgb(162, 106, 0);
+}
+
+.Nav-NavLink-About{
+    background-color: red;
+}
+
+.Nav-NavLink-About-Inactive, .Nav-NavLink-About-Active{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #96fff7;
+    border: 3px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+}
+
+.Nav-NavLink-Home-Inactive, .Nav-NavLink-Home-Active{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffe934;
+    border: 3px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+}
+
+:is(.Nav-NavLink-About-Inactive, .Nav-NavLink-About-Active, .Nav-NavLink-Home-Inactive, .Nav-NavLink-Home-Active):hover img{
+    animation: hover 0.1s forwards;
+}
+
+:is(.Nav-NavLink-About-Inactive, .Nav-NavLink-About-Active, .Nav-NavLink-Home-Inactive, .Nav-NavLink-Home-Active) img{
+    width: 35px;
+    height: 35px;
+}
+
+.Nav-LogOut{
+    width: 50px;
+    height: 50px;
+    background: red;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid black;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.Nav-LogOut img{
+    width: 35px;
+    height: 35px;
+}
+
+.Nav-LogOut:hover{
+    box-shadow: 0px 0px 10px black;
+}
+.Nav-LogOut:hover img{
+    animation: hover 0.1s forwards;
+}
+
+.Nav-Hide{
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.Nav-Div:hover{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+:is(.Nav-NavLink-Favorites-Inactive, .Nav-NavLink-Favorites-Active){
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 103, 128);
+    border: 3px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+}
+
+:is(.Nav-NavLink-Favorites-Inactive, .Nav-NavLink-Favorites-Active) img{
+    width: 30px;
+    height: 30px;
+}
+
+:is(.Nav-NavLink-Favorites-Inactive, .Nav-NavLink-Favorites-Active):hover img{
+    animation: hover 0.1s forwards;
+}
+.Nav-Logo{
+    left: 0;
+    margin: 0 auto 0 30px;
+}
+.Nav-Logo img{
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0px 0px 3px white);
+}
+
+.Nav-NavLink-About-Active{
+    box-shadow: 0 4px 3px #67c0ac;
+}
+.Nav-NavLink-Home-Active{
+    box-shadow: 0 4px 3px #67c0ac;
+}
+.Nav-NavLink-Favorites-Active{
+    box-shadow: 0 4px 3px #67c0ac;
+}
