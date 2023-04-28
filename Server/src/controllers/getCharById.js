@@ -23,30 +23,6 @@ const getCharById = async (req, res) => {
         return res.status(500).send(error.message)
     }
 }
-// const getCharByIda = (req, res) => {
-//     axios(URL + req.params.id)
-//     .then(response => response.data)
-//     .then(data => {
-//         if(data.id && data.name){
-//             return res.json({
-//                 id: data.id,
-//                 name: data.name,
-//                 status: data.status,
-//                 species: data.species,
-//                 origin: data.origin,
-//                 image: data.image,
-//                 gender: data.gender
-//             })
-//         }else{
-//             return res.status(404).send('Not found')
-//         }
-//     })
-//     .catch(error => {
-//         return res.status(500).send(error.message)
-//     })
-// }
-
-
 module.exports = {
     getCharById
 }
