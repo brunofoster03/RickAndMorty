@@ -15,11 +15,19 @@ function App() {
    const API_KEY = 'bec0b0fdb45d.275ed8bef7df2eb959b9'
    const location = useLocation().pathname
    const [characters, setCharacters] = useState([])
+   const [charactersCount, setCharactersCount] = useState(0)
    const [loadingCharacter, setLoadingCharacter] = useState(false)
    useEffect(() => {
       fetch(`${URL_BASE}?key=${API_KEY}`)
       .then(response => response.json())
       .then(data => {
+      })
+   },[])
+   useEffect(() => {
+      fetch(`${URL_BASE}?key=${API_KEY}`)
+      .then(response => response.json())
+      .then(data => {
+         setCharactersCount(data.info.count)
       })
    },[])
    const onSearch = async (id) => {
@@ -46,13 +54,11 @@ function App() {
       setCharacters(characters.filter(character => character.id !== id))
    }
    const addRandom = () => {
-      let id = Math.floor(Math.random() * 826) + 1
+      let id = Math.floor(Math.random() * charactersCount) + 1
       if(characters.map(obj => obj.id).includes(id)) return addRandom()
       onSearch(id)
    }
    const [access, setAccess] = useState(false)
-   const EMAIL = 'bruno.7de12@gmail.com'
-   const PASSWORD = 'bruno22'
    const navigate = useNavigate()
    const login = async (userData) => {
       const { email, password } = userData;
